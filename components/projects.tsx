@@ -64,8 +64,8 @@ export function Projects() {
   }, [selectedProject])
 
   return (
-    <section id="work" className="px-6 py-20 md:py-28">
-      <div className="mx-auto max-w-6xl">
+    <section id="work" className="px-4 py-12 sm:px-6 md:py-16">
+      <div className="mx-auto max-w-5xl">
         <div className="max-w-2xl">
           <p className="font-mono text-xs uppercase tracking-widest text-primary">
             Selected work
@@ -79,7 +79,7 @@ export function Projects() {
           </p>
         </div>
 
-        <div className="mt-12 space-y-5">
+        <div className="mt-8 space-y-3 md:mt-10">
           {projects.map((p) => (
             <article
               key={p.title}
@@ -93,7 +93,7 @@ export function Projects() {
                   setSelectedProject(p)
                 }
               }}
-              className="group grid cursor-pointer gap-6 rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/60 hover:shadow-[0_16px_48px_hsl(var(--primary)/0.12)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary md:grid-cols-[1fr_auto] md:items-center md:p-8"
+              className="group grid cursor-pointer gap-4 rounded-xl border border-border bg-card p-4 transition-all duration-300 hover:-translate-y-1 hover:border-primary/60 hover:shadow-[0_16px_48px_hsl(var(--primary)/0.12)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary sm:p-5 md:grid-cols-[1fr_auto] md:items-center md:p-6"
             >
               <div className="max-w-2xl">
                 <div className="flex flex-wrap items-center gap-3">
@@ -111,7 +111,7 @@ export function Projects() {
                     ))}
                   </span>
                 </div>
-                <h3 className="mt-3 flex items-center gap-2 text-xl font-semibold tracking-tight text-foreground md:text-2xl">
+                <h3 className="mt-2 flex items-center gap-2 text-lg font-semibold tracking-tight text-foreground md:text-xl">
                   {p.title}
                   <ArrowUpRight className="h-4 w-4 text-primary opacity-0 transition-opacity group-hover:opacity-100" />
                 </h3>
@@ -125,7 +125,7 @@ export function Projects() {
                 </p>
               </div>
 
-              <div className="shrink-0 rounded-xl border border-primary/20 bg-primary/5 p-5 text-center md:w-52">
+              <div className="shrink-0 rounded-lg border border-primary/20 bg-primary/5 p-3 text-center md:w-44">
                 <p className="text-2xl font-semibold tracking-tight text-primary md:text-3xl">
                   {p.metric}
                 </p>
